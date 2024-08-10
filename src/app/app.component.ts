@@ -18,7 +18,8 @@ import { userData } from '../shared/models/userData';
 export class AppComponent {
   title = 'Health-Challenge-Tracker';
   constructor(){
-    const storedUserData = localStorage.getItem('userData');
+    const storedUserData = JSON.parse(localStorage.getItem('userData')!);
+    console.log(storedUserData);
     if (!storedUserData) {
       localStorage.setItem('userData', JSON.stringify(userData));
     }

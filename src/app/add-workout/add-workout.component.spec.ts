@@ -30,7 +30,6 @@ export class AddWorkoutComponent {
       }]
     })
     console.log(this.tableData)
-    localStorage.setItem("userData", JSON.stringify(this.tableData));
-    
+    localStorage.setItem("userData",this.tableData);
   }
 }
