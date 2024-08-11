@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
+import { MatTable, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-import { userData } from '../../shared/models/userData';
-import { EventServices } from '../../shared/services/EventServices';
+import { EventServices } from '../services/EventServices/EventServices';
+import { UpdateWorkoutServices } from '../services/updateWorkoutServices/updateWorkoutService';
 
 @Component({
   selector: 'app-table',
@@ -12,24 +12,35 @@ import { EventServices } from '../../shared/services/EventServices';
   styleUrl: './table.component.css'
 })
 export class TableComponent {
+  userData = JSON.parse(localStorage.getItem('userData')!);
+  tableData = JSON.parse(localStorage.getItem('userData')!);
   currentPage = 0;
   pageSize = 5;
-  totalItems = userData.length;
-  paginatedData = this.paginateData(userData, this.currentPage, this.pageSize);
+  totalItems = this.tableData.length;
+  paginatedData = this.paginateData(this.tableData, this.currentPage, this.pageSize);
+  displayedColumns: string[] = ['name', "workouts", "numberOfWorkouts", "totalWorkoutMinutes"];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatTable) table!: MatTable<any>;
 
-  constructor(private events: EventServices) {
+  constructor(
+    private events: EventServices,
+    private workoutService: UpdateWorkoutServices
+  ){
     this.events.listen("filter_field", (value: string) => this.filterData(value));
     this.events.listen("search_field", (value: string) => this.searchByName(value));
   }
 
-  displayedColumns: string[] = ['name', "workouts", "numberOfWorkouts", "totalWorkoutMinutes"];
-
-  tableData = JSON.parse(localStorage.getItem('userData')!);
-
   ngOnInit() {
     this.updatePaginatedData();
+    this.workoutService.workouts$.subscribe((workouts) => {
+      if(workouts.length>0){
+        this.tableData = workouts;
+        this.userData = workouts;
+        this.updatePaginatedData();
+        this.table.renderRows();
+      }
+    })
   }
 
   transformWorkouts(workouts: { type: string, mins: number }[]): string {
@@ -43,13 +54,14 @@ export class TableComponent {
   }
 
   searchByName(value: string) {
-    this.tableData = value.length > 0 ? userData.filter((ele) => ele.name.includes(value)) : userData;
+    this.tableData = value.length > 0 ? this.userData.filter((ele:{id: number;name: string;workouts: []}) => ele.name.includes(value)) : this.userData;
     this.updatePaginatedData();
   }
 
   filterData(value: string) {
-    this.tableData = value === "All" ? userData : userData.filter((ele) =>
-      ele.workouts.some((workout) => workout.type === value)
+    this.tableData = value === "All" ? this.userData : this.userData.filter(
+      (ele: { id: number; name: string; workouts: { type: string; minutes: number; }[] }) => 
+        ele.workouts.some((workout) => workout.type === value)
     );
     this.updatePaginatedData();
   }

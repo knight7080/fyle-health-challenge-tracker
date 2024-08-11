@@ -19,7 +19,6 @@ export class AppComponent {
   title = 'Health-Challenge-Tracker';
   constructor(){
     const storedUserData = JSON.parse(localStorage.getItem('userData')!);
-    console.log(storedUserData);
     if (!storedUserData) {
       localStorage.setItem('userData', JSON.stringify(userData));
     }
