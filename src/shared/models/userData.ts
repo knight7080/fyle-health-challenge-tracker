@@ -1,22 +1,26 @@
 export let userData = [
-  { id: 1, name: 'John Doe', workouts: [{ type: 'Running', minutes: 30 }, { type: 'Cycling', minutes: 45 }] },
-  { id: 2, name: 'Jane Smith', workouts: [{ type: 'Swimming', minutes: 60 }, { type: 'Running', minutes: 20 }] },
-  { id: 3, name: 'Mike Johnson', workouts: [{ type: 'Yoga', minutes: 50 }, { type: 'Cycling', minutes: 40 }] },
-  { id: 4, name: 'Emily Davis', workouts: [{ type: 'Running', minutes: 35 }, { type: 'Cycling', minutes: 30 }] },
-  { id: 5, name: 'David Wilson', workouts: [{ type: 'Cycling', minutes: 60 }, { type: 'Running', minutes: 25 }] },
-  { id: 6, name: 'Sophia Brown', workouts: [{ type: 'Swimming', minutes: 45 }, { type: 'Yoga', minutes: 30 }] },
-  { id: 7, name: 'James Lee', workouts: [{ type: 'Running', minutes: 40 }, { type: 'Calisthenics', minutes: 30 }] },
-  { id: 8, name: 'Olivia Martinez', workouts: [{ type: 'Cycling', minutes: 50 }, { type: 'Swimming', minutes: 30 }] },
-  { id: 9, name: 'Daniel Garcia', workouts: [{ type: 'Yoga', minutes: 60 }, { type: 'Calisthenics', minutes: 20 }] },
-  { id: 10, name: 'Ava Rodriguez', workouts: [{ type: 'Cycling', minutes: 45 }, { type: 'Calisthenics', minutes: 35 }] },
-  { id: 11, name: 'Matthew Anderson', workouts: [{ type: 'Running', minutes: 25 }, { type: 'Calisthenics', minutes: 40 }] },
-  { id: 12, name: 'Isabella Thomas', workouts: [{ type: 'Cycling', minutes: 70 }, { type: 'Yoga', minutes: 40 }] },
-  { id: 13, name: 'Joshua Jackson', workouts: [{ type: 'Running', minutes: 50 }, { type: 'Yoga', minutes: 30 }] },
-  { id: 14, name: 'Mia White', workouts: [{ type: 'Swimming', minutes: 40 }, { type: 'Calisthenics', minutes: 35 }] },
-  { id: 15, name: 'Ethan Harris', workouts: [{ type: 'Yoga', minutes: 30 }, { type: 'Running', minutes: 60 }] },
-  { id: 16, name: 'Charlotte Clark', workouts: [{ type: 'Cycling', minutes: 55 }, { type: 'Calisthenics', minutes: 25 }] },
-  { id: 17, name: 'Alexander Lewis', workouts: [{ type: 'Running', minutes: 45 }, { type: 'Yoga', minutes: 35 }] },
-  { id: 18, name: 'Amelia Walker', workouts: [{ type: 'Swimming', minutes: 50 }, { type: 'Cycling', minutes: 30 }] },
-  { id: 19, name: 'Liam Robinson', workouts: [{ type: 'Calisthenics', minutes: 40 }, { type: 'Running', minutes: 30 }] },
-  { id: 20, name: 'Harper Young', workouts: [{ type: 'Yoga', minutes: 55 }, { type: 'Swimming', minutes: 25 }] }
+  {
+    id: 1,
+    name: 'John Doe',
+    workouts: [
+      { type: 'Running', minutes: 30 },
+      { type: 'Cycling', minutes: 45 }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    workouts: [
+      { type: 'Swimming', minutes: 60 },
+      { type: 'Running', minutes: 20 }
+    ]
+  },
+  {
+    id: 3,
+    name: 'Mike Johnson',
+    workouts: [
+      { type: 'Yoga', minutes: 50 },
+      { type: 'Cycling', minutes: 40 }
+    ]
+  },
 ];

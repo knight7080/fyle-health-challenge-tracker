@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatTable, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-import { EventServices } from '../services/EventServices/EventServices';
-import { UpdateWorkoutServices } from '../services/updateWorkoutServices/updateWorkoutService';
+import { EventServices } from '../../services/EventServices/EventServices';
+import { UpdateWorkoutServices } from '../../services/updateWorkoutServices/updateWorkoutService';
 
 @Component({
   selector: 'app-table',

@@ -5,7 +5,7 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular
 import {MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { EventServices } from '../services/EventServices/EventServices';
+import { EventServices } from '../../services/EventServices/EventServices';
 import { AddWorkoutComponent } from '../add-workout/add-workout.component'; 
 
 import { MatDialog } from '@angular/material/dialog';

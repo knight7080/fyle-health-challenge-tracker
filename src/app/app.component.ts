@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SearchComponent } from "./search/search.component";
-import { TableComponent } from "./table/table.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
-import { AddWorkoutComponent } from "./add-workout/add-workout.component";
 import { userData } from '../shared/models/userData';
+import { ToolbarComponent } from "./toolbar/toolbar.component";
+import { HomeComponent } from "./home/home.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SearchComponent, TableComponent, HeaderComponent, FooterComponent, AddWorkoutComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, ToolbarComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
