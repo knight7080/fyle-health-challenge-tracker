@@ -1,27 +1,66 @@
-# HealthChallengeTracker
+# Fyle Health Challenge Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+### This is a assignment project for the Front End Developer Internship Role at Fyle. This project is deployed in Vercel.
+- Github Repo: https://github.com/knight7080/fyle-health-challenge-tracker.git
+- Vercel Link: https://fyle-health-challenge-tracker.vercel.app/
+## Note
+- The Add Work feature can be accessed by clicking the `+ Add Workout` button which produces a overlay modal via which the said task can be done.
+- The optional feature `workout progress using charts` can be accessed through the show_chart icon on the left tool bar.
+- The data is stored in local storage, ensuring seamless functionality.
+- Everything functions smoothly without any issues, both locally and on Vercel.
+- All the said requirements are covered.
+  
+## Project Preview
+![image](https://github.com/user-attachments/assets/453f46cd-d9c7-4fdc-bf3a-1cd14d74bd46)
+![image](https://github.com/user-attachments/assets/46473cea-081e-4081-b4f5-d4455be84694)
+![image](https://github.com/user-attachments/assets/56a74c65-3849-4e56-91c3-8ae5577bcb57)
 
-## Development server
+## Demo
+You can view the live demo of the application [here](https://fyle-health-challenge-tracker.vercel.app/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To install the project locally, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository**:
 
-## Build
+   ```bash
+   git clone https://github.com/knight7080/fyle-health-challenge-tracker.git
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Navigate to the project directory**:
 
-## Running unit tests
+   ```bash
+   cd health-challenge-tracker
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Install the dependencies**:
 
-## Running end-to-end tests
+   ```bash
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Start the development server**:
 
-## Further help
+   ```bash
+   ng serve
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+5. **Open your browser and navigate to** `http://localhost:4200/` to see the application in action.
+
+## Code Coverage
+To check the code coverage of the project, run the following command:
+
+```bash
+ng test --code-coverage
+```
+
+## Code Coverage Report
+### Added unit test for 1 component (user-charts.components.ts) and 1 service (update-workout.services.spec.ts).
+![image](https://github.com/user-attachments/assets/1073f2d9-4840-475b-8143-086023bac696)
+
+![image](https://github.com/user-attachments/assets/10452dfc-6975-49c4-85a6-938ec55d4559)
+
+![image](https://github.com/user-attachments/assets/a8ba3527-97e9-44fd-a828-94e03c731aa6)
+
+<h2 align="right" style="font-size:18px; color:gray"><i>Created By - Kaushik</h2>

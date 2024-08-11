@@ -18,7 +18,7 @@ export class UserChartsComponent implements OnInit, OnChanges, OnDestroy {
     data: {
       labels: [],
       datasets: [{
-        label: "Workout Progress",
+        label: "Minutes",
         data: [],
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgb(54, 162, 235)',
@@ -45,7 +45,7 @@ export class UserChartsComponent implements OnInit, OnChanges, OnDestroy {
     },
   };
 
-  private initializeChart(): void {
+  public initializeChart(): void {
     const canvas = document.getElementById('myChart') as HTMLCanvasElement;
     if (canvas) {
       if(this.chart){
@@ -56,7 +56,7 @@ export class UserChartsComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  private updateChart(): void {
+  public updateChart(): void {
     if (this.selectedUser && this.selectedUser.workouts) {
       const labels = this.selectedUser.workouts.map((ele: { type: string; minutes: number }) => ele.type);
       const data = this.selectedUser.workouts.map((ele: { type: string; minutes: number }) => ele.minutes);
@@ -72,7 +72,7 @@ export class UserChartsComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  private resizeChart(): void {
+  public resizeChart(): void {
     if (this.chart) {
       const chartContainer = this.chart.canvas.parentNode;
       this.chart.resize(chartContainer.clientWidth, chartContainer.clientHeight);

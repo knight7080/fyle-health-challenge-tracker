@@ -13,7 +13,4 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProgressComponent {
   selectedUser! : {id: number;name: string;workouts: []};
-  show(){
-    console.log(this.selectedUser);
-  }
 }
